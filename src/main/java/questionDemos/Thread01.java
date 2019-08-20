@@ -124,7 +124,7 @@ public class Thread01 {
                 for (int i = 0; i < 10; i++) {
                     con.add(new Object());
                     count.countDown();
-                    System.out.println("add no is "+ i);
+                    System.out.println("add no is " + i);
                 }
                 System.out.println("method 02 end");
             }
