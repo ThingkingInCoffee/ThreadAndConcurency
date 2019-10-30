@@ -13,6 +13,12 @@ import java.util.concurrent.TimeUnit;
  * 可以更简单的创建若干种线程池
  *
  * shutDown方法  优雅关闭， 不是强行关闭线程池，回收线程池中的资源。而是不在处理新的任务，将已有任务处理完毕后再关闭
+ *
+ * 线程池的状态
+ * running
+ * shutting down
+ * terminated
+ *
  */
 public class FixedThreadPoolDemo {
 

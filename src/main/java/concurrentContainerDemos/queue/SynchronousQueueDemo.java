@@ -20,7 +20,7 @@ public class SynchronousQueueDemo {
             public void run() {
                 System.out.println(Thread.currentThread().getName()+"thread Begin");
                 try {
-                    TimeUnit.SECONDS.sleep(4);
+                    TimeUnit.SECONDS.sleep(5);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -33,19 +33,19 @@ public class SynchronousQueueDemo {
         },"out put ").start();
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         //add 方法也可以添加数据，但是为非阻塞的，会直接向队列中插入数据，可能会抛出 Queue full 的 IllegalStateException异常
-        demo.queue.add("add data");
+//        demo.queue.add("add data");
         //put 方法为阻塞的，只有存在取值的操作才会放入数据
-//        try {
-//            demo.queue.put("put value");
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            demo.queue.put("put value 55555");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         System.out.println(Thread.currentThread().getName()+" size is : "+ demo.queue.size());
 

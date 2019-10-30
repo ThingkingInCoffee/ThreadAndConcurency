@@ -1,4 +1,4 @@
-package concurrentContainerDemos;
+package concurrentContainerDemos.map;
 
 import java.util.Arrays;
 import java.util.Hashtable;
