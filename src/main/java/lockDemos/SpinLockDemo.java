@@ -31,7 +31,7 @@ public class SpinLockDemo {
             public void run() {
                 demo.myLock();
                 try {
-                    Thread.sleep(5);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
